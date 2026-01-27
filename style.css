@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(233, 215, 215);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+
+.card {
+    background: rgb(242, 240, 240);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 30%;
+    margin: 20px auto;
+    object-fit: cover;
+    border: 6px solid #0d0a0af1;
+    display: block;
+}
+
+h1 {
+    color: #170b0b;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.job-title {
+    color: #0f0202;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.bio {
+    color: #070000;
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.contact-info {
+    background: #ebe4e4;
+    padding: 20px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.contact-info p {
+    color: #070000;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.contact-info strong {
+    color: #0e0606;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #0f0c0c;
+    color: rgb(226, 218, 218);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    flex: 1;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #fbe9e9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-contact {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    flex: none;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+}
