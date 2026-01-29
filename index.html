@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card contact-card">
+            <h1> my project</h1>
+
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">projectname</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="star">star date</label>
+                    <input type="text" id="star" name="star" placeholder="Masukkan tanggal mulai anda" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="end-date">end date</label>
+                    <input type="text" id="end-date" name="end-date" placeholder="Masukkan tanggal selesai anda"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="description">deskripsi</label>
+                    <input type="text" id="description" name="description" placeholder="Masukkan deskripsi anda"
+                        required>
+                </div>
+                <div class="technologies">
+                    <input type="radio" id="nodejs" name="tech" value="nodejs">
+                    <label for="nodejs">Node.js</label>
+                    <input type="radio" id="reactjs" name="tech" value="reactjs">
+                    <label for="reactjs">React.js</label>
+                    <input type="radio" id="nextjs" name="tech" value="nextjs">
+                    <label for="nextjs">Next.js</label>
+                    <input type="radio" id="typescript" name="tech" value="typescript">
+                    <label for="typescript">TypeScript</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                
+
+            </form>
+
+
+
+
+        </div>
+
+        <div id="projects" class="mt-4"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script src="java.js"></script>
+</body>
+
+</html>
