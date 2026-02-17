@@ -1,0 +1,206 @@
+/* =====================
+   RESET & GLOBAL
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0d2cb6, #764ba2);
+  min-height: 100vh;
+  padding-top: 90px;
+  color: #333;
+}
+
+/* =====================
+   CONTAINER
+===================== */
+.container {
+  max-width: 1100px;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================
+   PROFILE CARD
+===================== */
+.profile-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 420px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.job-title {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.bio {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 30%;
+  object-fit: cover;
+  margin: 20px auto;
+  border: 5px solid #333;
+}
+
+/* =====================
+   CONTACT INFO
+===================== */
+.contact-info {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #444;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-dark {
+  background: #111;
+  border: none;
+}
+
+.btn-dark:hover {
+  background: #000;
+}
+
+.btn-contact {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* =====================
+   FORM (ADD PROJECT)
+===================== */
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+}
+
+/* =====================
+   PROJECT CARD
+===================== */
+.project-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+.project-card h5 {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.project-card small {
+  color: #777;
+}
+
+/* =====================
+   DETAIL PAGE
+===================== */
+.detail-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .profile-card {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
