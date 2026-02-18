@@ -1,0 +1,95 @@
+:root {
+            --primary-color: #25D366; /* WhatsApp Green */
+            --accent-color: #128C7E;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: #333;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            font-weight: 700;
+            color: #2d3436;
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #636e72;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 12px 15px;
+            border: 2px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.1);
+            outline: none;
+        }
+
+        .btn-send {
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 10px;
+            padding: 12px;
+            font-weight: 600;
+            color: white;
+            width: 100%;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-send:hover {
+            background-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            transform: scale(1.02);
+            color: white;
+        }
+
+        /* Dekorasi tambahan */
+        .decoration-circle {
+            position: absolute;
+            z-index: -1;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Jarak tambahan agar saat scroll tidak terlalu mepet ke atas */
+        section {
+            scroll-margin-top: 80px; 
+        }
+        

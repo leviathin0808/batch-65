@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Project - Personal Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/css/detail.css">
+    <style>
+        :root {
+            --primary-color: #25D366;
+            --dark-bg: #0f172a;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+        body.dark {
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            background-color: var(--dark-bg);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #f8fafc;
+            transition: background 0.3s;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        a.back-btn {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .project-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+        .project-banner {
+            width: 100%;
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        }
+        .project-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        .content-section h2 { margin-bottom: 15px; font-size:1.5rem; }
+        .content-section p { margin-bottom: 20px; color: var(--text-muted); }
+        .sidebar-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+        }
+        .sidebar-card h3 { font-size: 1.1rem; margin-bottom: 15px; }
+        .tech-list { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:25px; }
+        .tech-tag {
+            background: rgba(37,211,102,0.1);
+            color: var(--primary-color);
+            padding:5px 12px;
+            border-radius:20px;
+            font-size:0.8rem;
+            font-weight:600;
+        }
+        .action-btns .btn {
+            display:block;
+            text-align:center;
+            padding:12px;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:600;
+            margin-bottom:10px;
+            transition:0.3s;
+        }
+        .btn.primary { background: var(--primary-color); color:white; }
+        .btn.outline { border:2px solid #e2e8f0; color: var(--text-main); }
+        .btn:hover { opacity:0.9; transform: translateY(-2px); }
+        @media(max-width:768px){
+            .project-grid { grid-template-columns:1fr; }
+            .project-banner { height:250px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-btn">← Back to Portfolio</a>
+
+        <header class="project-header">
+            <h1>Personal Website & Blog</h1>
+            <div class="project-meta">
+                <span>📅 Jan 2024</span>
+                <span>📂 Web Development</span>
+                <span>🔗 version 2.0</span>
+            </div>
+        </header>
+
+        <div class="project-banner">
+            <img src="/styles/image/cat2.jpg" alt="Project Preview">
+        </div>
+
+        <div class="project-grid">
+            <div class="content-section">
+                <h2>Project Overview</h2>
+                <p>
+                    Website portofolio pribadi untuk memamerkan karya & pengalaman sebagai Full-stack Developer. Fokus utama: performance & kemudahan manajemen konten.
+                </p>
+
+                <h2>Key Features</h2>
+                <ul style="margin-left:20px; color:var(--text-muted); margin-bottom:20px;">
+                    <li>Dark & Light mode toggle.</li>
+                    <li>Sistem blogging menggunakan Markdown.</li>
+                    <li>Integrasi API WhatsApp untuk kontak.</li>
+                    <li>Desain sepenuhnya responsif.</li>
+                </ul>
+
+                <h2>Challenges & Solutions</h2>
+                <p>
+                    Optimisasi gambar agar website cepat dibuka, menggunakan <i>lazy loading</i> & kompresi otomatis.
+                </p>
+            </div>
+
+            <aside>
+                <div class="sidebar-card">
+                    <h3>Technologies</h3>
+                    <div class="tech-list">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Handlebars</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+
+                    <h3>Project Links</h3>
+                    <div class="action-btns">
+                        <a href="#" class="btn primary">View Live De

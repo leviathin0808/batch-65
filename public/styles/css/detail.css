@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #25D366;
+    --secondary-color: #10b981;
+    --dark-bg: #0f172a;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --shadow-color: rgba(0,0,0,0.08);
+}
+
+body.dark {
+    --card-bg: #1e293b;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    background-color: var(--dark-bg);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: #f8fafc;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Back Button */
+a.back-btn {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+a.back-btn:hover {
+    color: var(--secondary-color);
+}
+
+/* Project Header */
+.project-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-meta {
+    display: flex;
+    gap: 25px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+    font-size: 0.95rem;
+}
+
+/* Project Banner */
+.project-banner {
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    box-shadow: 0 20px 30px -10px var(--shadow-color);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+.project-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.project-banner:hover img {
+    transform: scale(1.05);
+}
+
+/* Grid Layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.content-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    position: relative;
+}
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.content-section p {
+    margin-bottom: 22px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+.content-section ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Sidebar Card */
+.sidebar-card {
+    background: var(--card-bg);
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px -5px var(--shadow-color);
+    position: sticky;
+    top: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.sidebar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px -5px var(--shadow-color);
+}
+
+.sidebar-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+    color: var(--primary-color);
+}
+
+/* Technologies */
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+.tech-tag {
+    background: rgba(37,211,102,0.15);
+    color: var(--primary-color);
+    padding: 6px 15px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: transform 0.2s;
+}
+.tech-tag:hover {
+    transform: scale(1.1);
+}
+
+/* Action Buttons */
+.action-btns .btn {
+    display: block;
+    text-align: center;
+    padding: 13px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+.btn.primary {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+.btn.outline {
+    border: 2px solid #e2e8f0;
+    color: var(--text-main);
+}
+.btn:hover {
+    opacity: 0.95;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .project-grid {
+        grid-template-columns:1fr;
+    }
+    .project-banner { height: 250px; }
+}

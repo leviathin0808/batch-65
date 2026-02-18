@@ -1,0 +1,174 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Martin Portfolio</title>
+        <link rel="stylesheet" href="styles/css/home.css" />
+
+    </head>
+
+    <body>
+
+        <header class="navbar">
+            <div class="logo">SE</div>
+
+            <nav>
+                <a href="#tech-stack">Tech Stack</a>
+                <a href="#">Experience</a>
+                <a href="#projects">Projects</a>
+            </nav>
+
+            <div class="nav-btn">
+                <div class="nav-btn">
+                    <a href="/talk" class="btn green">Let's Talk</a>
+                    <a href="/download-cv" class="btn dark">Download CV</a>
+                    <button id="themeToggle" class="theme-btn">🌙</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="hero">
+            <div class="hero-img">
+                <img src="/styles/image/had.jpg" alt="Martin">
+            </div>
+
+            <div class="hero-content">
+                <h1>Hi, I'm Martin <span>👋</span></h1>
+                <h2>Indie Hacker & Full-Stack Developer</h2>
+
+                <p>
+                    I build and ship digital products from scratch to production.
+                    Passionate about creating end-to-end solutions and turning ideas
+                    into fully functional applications.
+                </p>
+
+                <div class="info">
+                    📍 Kerinci, Jambi, Indonesia
+                </div>
+
+                <div class="status">
+                    <span></span> Available for new projects
+                </div>
+
+                <div class="hero-btn">
+                    <a href="/talk" class="btn green">Let's Talk</a>
+                    <a href="/download-cv" class="btn dark">Download CV</a>
+                </div>
+            </div>
+        </main>
+
+        <section id="tech-stack" class="tech-stack-full">
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="/styles/image/cat2.jpg" alt="Project 1">
+                    <div class="project-content">
+                        <h3>Personal Web</h3>
+                        <p>Fullstack portfolio website built with Express & Handlebars.</p>
+                        <div class="project-btn">
+                            <a href="/detail" class="btn green">detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="/styles/image/cat.jpg" alt="Project 2">
+                    <div class="project-content">
+                        <h3>CRUD App</h3>
+                        <p>Project management app with PostgreSQL database.</p>
+                        <div class="project-btn">
+                            <a href="/detail" class="btn green">detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="/styles/image/cat4.jpg" alt="Project 3">
+                    <div class="project-content">
+                        <h3>Landing Page</h3>
+                        <p>Modern startup landing page with responsive UI.</p>
+                        <div class="project-btn">
+                            <a href="/detail" class="btn green">detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>About Me</h3>
+            <p>Hi! I'm Martin, an indie hacker & full-stack developer building digital products from scratch.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#tech-stack">Tech Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="/talk">Let's Talk</a></li>
+                <li><a href="/download-cv">Download CV</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>📍 Kerinci, Jambi, Indonesia</p>
+            <p>✉️ <a href="mailto:martin@example.com">martin@example.com</a></p>
+            <p>🔗 
+                <a href="https://github.com/martin" target="_blank">GitHub</a> | 
+                <a href="https://linkedin.com/in/martin" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2026 Martin Hattarajasa. All rights reserved.
+    </div>
+</footer>
+
+        </section>
+
+        <script>
+            // SCRIPT UNTUK DARK MODE
+            const toggleBtn = document.getElementById("themeToggle");
+            const body = document.body;
+
+            if (localStorage.getItem("theme") === "dark") {
+                body.classList.add("dark");
+                toggleBtn.textContent = "☀️";
+            }
+
+            toggleBtn.addEventListener("click", () => {
+                body.classList.toggle("dark");
+                if (body.classList.contains("dark")) {
+                    localStorage.setItem("theme", "dark");
+                    toggleBtn.textContent = "☀️";
+                } else {
+                    localStorage.setItem("theme", "light");
+                    toggleBtn.textContent = "🌙";
+                }
+            });
+        </script>
+    </body>
+
+    </html>
